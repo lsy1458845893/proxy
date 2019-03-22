@@ -1,5 +1,5 @@
 {
-  "name": "@lsy1458845893/proxy",
+  "name": "@ya-lsy/proxy",
   "version": "1.0.0",
   "description": "simple http proxy",
   "main": "index.js",
