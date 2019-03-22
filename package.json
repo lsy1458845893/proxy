@@ -1,5 +1,5 @@
 {
-  "name": "proxy",
+  "name": "@lsy1458845893/proxy",
   "version": "1.0.0",
   "description": "simple http proxy",
   "main": "index.js",
@@ -21,5 +21,6 @@
   "homepage": "https://github.com/lsy1458845893/proxy#readme",
   "devDependencies": {
     "@types/node": "^11.11.6"
-  }
+  },
+  "dependencies": {}
 }
