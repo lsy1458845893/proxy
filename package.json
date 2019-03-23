@@ -19,8 +19,7 @@
     "url": "https://github.com/lsy1458845893/proxy/issues"
   },
   "homepage": "https://github.com/lsy1458845893/proxy#readme",
-  "devDependencies": {
+  "dependencies": {
     "@types/node": "^11.11.6"
-  },
-  "dependencies": {}
+  }
 }

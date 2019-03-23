@@ -7,7 +7,7 @@ simple http proxy
 
 import * as http from "http";
 import * as https from "https";
-import Proxy from "../node-proxy";
+import Proxy from "@ya-lsy/proxy";
 
 class MyProxyServer extends Proxy {
 

@@ -30,7 +30,7 @@ export default class Proxy {
     });
   }
 
-  public request(req: http.IncomingMessage, res: http.ServerResponse) {
+  protected request(req: http.IncomingMessage, res: http.ServerResponse) {
     const url = parse(req.url);
     const headers = {};
     for (const key in req.headers) {
@@ -54,7 +54,7 @@ export default class Proxy {
     server.on('error', e => this.onerror('request', req, e));
   }
 
-  public connect(req: http.IncomingMessage, client_socket: net.Socket, head: Buffer) {
+  protected connect(req: http.IncomingMessage, client_socket: net.Socket, head: Buffer) {
     const url = parse(`http://${req.url}`);
     const server_socket = net.connect(Number(url.port) || 80, url.hostname);
     client_socket.write('HTTP/1.1 200 Connection Established\r\nProxy-agent: Node.js-Proxy\r\n\r\n');
@@ -64,7 +64,7 @@ export default class Proxy {
     server_socket.on('error', e => this.onerror('connect', req, e));
   }
 
-  public direct(req: http.IncomingMessage, res: http.ServerResponse): void { res.writeHead(404); }
+  protected direct(req: http.IncomingMessage, res: http.ServerResponse): void { res.writeHead(404); }
 
   public authorization(req: http.IncomingMessage): Promise<boolean> | boolean { return true; }
 
